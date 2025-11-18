@@ -18,10 +18,11 @@
             </div>
         </div>
         <ul class="nav-link" id="nav-link">
-             <li><a href="#">Home</a></li>
-             <li><a href="#">Sobre</a></li>
-             <li><a href="#">Dicas</a></li>
-             <li><a href="#">Music</a></li>
+             <li><a href="siteinicio.htm">Home</a></li>
+             <li><a href="sobre.htm">Sobre</a></li>
+             <li><a href="dicas.htm">Dicas</a></li>
+             <li><a href="questionario.htm">Questionario</a></li>
+             <li><a href="login.htm">Login</a></li>
         </ul>
         <div class="nav-btn">
              <button class="btn"><i class='bx bx-search'></i></button>
@@ -121,7 +122,7 @@
              <a href="#">Read more <span><i class=""></i></span></a>
         </div>
         <div class="banner-card">
-            <span class="banner-icon"><i class=""></i></span>
+            <span class="banner-icon"><i class="i"></i></span>
             <h4>emocional</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eius nemo sint maiores sapiente dicta, magni omnis magnam laborum enim! Itaque quibusdam eligendi accusamus pariatur dolore molestiae alias quasi fugit?</p>
              <a href="#">Read more <span><i class=""></i></span></a>
@@ -158,7 +159,7 @@
                    cuida de voce e te ajudar
                 </li>
                 <li>
-                   <spam><i class=""></i></spam>
+                   <span><i class=""></i></span>
                    cuida de voce e te ajudar
                 </li>
             </ul>
@@ -167,6 +168,107 @@
     
    </section>
 
+   <section class="testimonial-section">
+     <h2 class="section-header">asidijdiheuhudhdudh</h2>
+     <p class="section-descrit">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio rerum non nostrum, eligendi minima adipisci mollitia numquam maiores quis quas quo dolorem tenetur, rem laboriosam ea cupiditate eveniet similique iusto.
+     </p>
+
+     <div class="testimonial-conteiner" id="testimonial-conteiner">
+        <div class="testimonial-card actividade">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum modi ipsam ullam nisi voluptate, quas minus vitae rerum nulla laborum eveniet maxime hic ipsa deserunt, unde obcaecati commodi.</p>
+            <img src="cerebro.jpg" alt="">
+            <h4>David Lee</h4>
+            <h5>Busines exucutive</h5>
+        </div>
+        <div class="testimonial-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum modi ipsam ullam nisi voluptate, quas minus vitae rerum nulla laborum eveniet maxime hic ipsa deserunt, unde obcaecati commodi.</p>
+            <img src="cerebro.jpg" alt="">
+            <h4>David Lee</h4>
+            <h5>Busines exucutive</h5>
+        </div>
+        <div class="testimonial-card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum modi ipsam ullam nisi voluptate, quas minus vitae rerum nulla laborum eveniet maxime hic ipsa deserunt, unde obcaecati commodi.</p>
+            <img src="cerebro.jpg" alt="">
+            <h4>David Lee</h4>
+            <h5>Busines exucutive</h5>
+        </div>
+     </div>
+     <div class="dots " id="dots"><span></span></div>
+   </section>
+
+   <footer class="footer" id="contact">
+    <div class="section-conteiner-footer-conteiner">
+        <div class="footer-col">
+            <div class="logo footer-logo">
+                <a href="#">Bright<span>Wind</span></a>
+            </div>
+            <p class="section-descrit">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut maiores optio nihil officiis harum, quasi, magnam illo autem beatae laborum voluptatibus aperiam eos. Sed officia esse corporis ducimus! Ex!
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Seçoes</h4>
+            <ul class="footer-links">
+                <li><a href="#">login</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Dicas</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">questionario</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contato</h4>
+            <ul class="footer-links">
+                <li><a href="#"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Dicas</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>ideias</h4>
+            <ul class="footer-links">
+                <li><a href="#">login</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Dicas</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bar">
+        copyright o 2025 procoder09.All rigthts reserved
+    </div>
+   </footer>
+     
+   <script>
+      const cards=document.querySelectorAll(".testimonial-card");
+      const dotsconteiner=ducument.getElementById("dots");
+      let currentIndex=0;
+
+      cards.forEach((_,idx) => {
+        const dots=document.createElement('span');
+        dots.addEventListener('click',()=>showSlide(idx));
+        dotsconteiner.appendChid(dots)
+      })
+      const dots=document.querySelector('#dots .dot' );
+      function showSlide(index) {
+        cards.forEach(card=>card.classList.remove('active'));
+        dots.forEach(dots=>dots.classList.remove('active'));
+        cards[index].classList.add("active")
+        dots[index].classList.add("active")
+        currentIndex=index;
+      }
+      
+      function autotslide(){
+        currentIndex=(currentIndex + 1)% cards.length;
+        showSlide(currentIndex)
+      }
+      showSlide(currentIndex);
+      setInterval(autoslide,5000)
+   </script>
 
 
 
